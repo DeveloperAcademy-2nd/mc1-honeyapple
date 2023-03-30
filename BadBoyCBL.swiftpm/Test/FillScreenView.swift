@@ -23,7 +23,7 @@ struct FillScreenView: View {
             
             VStack {
                 Button("ee") {
-                    transition1 = true
+                    transition1.toggle()
                 }
                 Spacer()
             }
