@@ -12,5 +12,7 @@ struct BigIdea: View {
 struct BigIdea_Previews: PreviewProvider {
     static var previews: some View {
         BigIdea()
+            .previewInterfaceOrientation(.landscapeRight)
+            .previewDevice("iPad Pro (12.9-inch) (6th generation)")
     }
 }

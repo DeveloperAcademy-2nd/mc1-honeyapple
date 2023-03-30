@@ -15,8 +15,10 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct BranchTestView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewInterfaceOrientation(.landscapeRight)
+            .previewDevice("iPad Pro (12.9-inch) (6th generation)")
     }
 }
