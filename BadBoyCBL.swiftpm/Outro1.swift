@@ -12,7 +12,10 @@ struct Outro1: View {
                     .frame(width: 178.01, height: 80.41)
                     .offset(x: 432, y: 316)
             }
-        }
+        }.onAppear(perform: {
+            playSound(sound:"outro 1", type: "m4a")
+            
+        })
     }
 }
 

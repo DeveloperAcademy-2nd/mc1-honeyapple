@@ -18,7 +18,9 @@ struct ChallengeStatement: View {
             }
             .offset(x: -442, y: 236)
             .padding(.bottom, 15)
-        }
+        }.onAppear(perform: {
+            playSound(sound: "challenge statement", type:"m4a")
+        })
     }
 }
 

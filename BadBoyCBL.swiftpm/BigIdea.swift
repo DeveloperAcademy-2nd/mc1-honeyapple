@@ -18,7 +18,9 @@ struct BigIdea: View {
             }
             .offset(x: 410, y: -180)
             .padding(.bottom, 15)
-        }
+        }.onAppear(perform: {
+            playSound(sound: "big idea", type:"m4a")
+        })
     }
 }
 
