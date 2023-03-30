@@ -7,10 +7,11 @@ struct Investigate2: View {
                 .resizable()
                 .scaledToFill()
             Button(action: {print("Button1")}){
-                           Image("버튼")
-                               .resizable()
-                               .frame(width: 178.01, height: 80.41)
-                       }
+                Image("버튼")
+                    .resizable()
+                    .frame(width: 178.01, height: 80.41)
+                    .offset(x: 388, y: 208)
+            }
         }
     }
 }

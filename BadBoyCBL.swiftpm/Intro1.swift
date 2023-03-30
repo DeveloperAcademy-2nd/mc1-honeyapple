@@ -8,15 +8,13 @@ struct Intro1: View {
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
             Button(action: {print("Button1")}){
-                           Image("버튼")
-                               .resizable()
-                               .frame(width: 178.01, height: 80.41)
-                       }
+                Image("버튼")
+                   .resizable()
+                   .frame(width: 178.01, height: 80.41)
+                   .offset(x: 550, y: 440)
+                   .padding(.bottom, 15)
+            }
         }
-            
-           
-        
-       
     }
 }
 

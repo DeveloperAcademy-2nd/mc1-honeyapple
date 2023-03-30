@@ -6,6 +6,12 @@ struct Outro2: View {
             Image("Outro2")
                 .resizable()
                 .scaledToFill()
+            Button(action: {print("Button1")}){
+                Image("버튼")
+                    .resizable()
+                    .frame(width: 99, height: 44.72)
+                    .offset(x: 408, y: 183)
+            }
         }
     }
 }

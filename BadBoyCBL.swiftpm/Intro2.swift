@@ -5,13 +5,15 @@ struct Intro2: View {
         ZStack{
             Image("Intro2")
                 .resizable()
+                .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
-            Button(action: {print("Button1")}){
-                           Image("버튼")
-                               .resizable()
-                               .frame(width: 178.01, height: 80.41)
-                       }
-            
+            Button(action: {print("Button1")}) {
+                Image("BlueNextButton")
+                    .resizable()
+                    .frame(width: 191.1, height: 65.84)
+                    .offset(x: 360, y: 310)
+                    .padding(.bottom, 15)
+            }
         }
     }
 }
