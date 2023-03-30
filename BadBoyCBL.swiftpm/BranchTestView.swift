@@ -70,6 +70,7 @@ struct BranchTestView: View {
                         if #available(iOS 16.0, *) {
                             NavigationStack {
                                 ZStack {
+                                    
                                     Image("Browser Body")
                                         .resizable()
                                         .scaledToFit()
@@ -85,6 +86,9 @@ struct BranchTestView: View {
                                         Image("Next Button")
                                         
                                     }
+                                    
+                                    Text("rjksksksksk")
+                                        .offset(CGSize(width: 100, height: -300))
                                     // .sheet(isPresented: $newView, content: {
                                     //     Text("newView")
                                     // })
