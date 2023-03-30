@@ -1,5 +1,6 @@
 # ㅇr ㅋr 데 ㅁi 오★ㄴr★전 Sexy Hot Cool 뷰리~ 구ㅣ 여 운 팀 (주)지곡동 꿀사과™ ㅎㅎ,,,,,,
 
+<img width="1105" alt="in_intro1" src="https://user-images.githubusercontent.com/69354045/228878354-e1f7dd3d-e8b0-4f9f-a6eb-20d0a554df0f.png">
 
 
 반사과🍎의 나쁜남조r CBL 눈물없이 볼,,수,, 없눈,,, ㅠ-ㅠ 러브 스토리가 궁금하다면,,??
