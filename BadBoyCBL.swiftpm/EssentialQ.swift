@@ -4,7 +4,7 @@ struct EssentialQ: View {
     var body: some View {
         Image("EssentialQ")
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
     }
 }
 

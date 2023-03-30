@@ -2,9 +2,10 @@ import SwiftUI
 
 struct Intro1: View {
     var body: some View {
-        Image("Intro1")
+        Image("뉴인트로")
             .resizable()
-            .scaledToFit()
+            .frame(maxWidth:.infinity, maxHeight: .infinity)
+            .scaledToFill()
     }
 }
 

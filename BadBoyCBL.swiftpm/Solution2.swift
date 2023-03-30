@@ -4,7 +4,7 @@ struct Solution2: View {
     var body: some View {
         Image("Solution2")
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
     }
 }
 

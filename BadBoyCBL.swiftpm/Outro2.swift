@@ -4,7 +4,7 @@ struct Outro2: View {
     var body: some View {
         Image("Outro2")
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
     }
 }
 

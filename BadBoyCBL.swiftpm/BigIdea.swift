@@ -2,11 +2,10 @@ import SwiftUI
 
 struct BigIdea: View {
     var body: some View {
-        VStack {
             Image("BigIdea")
                 .resizable()
-                .scaledToFit()
-        }
+                .scaledToFill()
+        
     }
 }
 
