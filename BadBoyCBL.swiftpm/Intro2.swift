@@ -39,7 +39,7 @@ struct Intro2: View {
                 BigIdea {
                     showEssentialQuestion = true
                 }
-                    .transition(AnyTransition.scale.animation(.easeInOut))
+                    
             }
             
             // Essential Question

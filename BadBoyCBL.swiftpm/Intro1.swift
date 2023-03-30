@@ -20,7 +20,12 @@ struct Intro1: View {
             .padding(.bottom, 15)
             
             if showIntro2 {
-                Intro2()
+                
+                // // 구버전: 전체화면이 줌인됩니다. 문제 발생시 롤백해주세요.
+                // Intro2()
+                
+                // 신버전: 브라우저만 줌인됩니다.
+                BrowserContainer()
             }
         }
     }
