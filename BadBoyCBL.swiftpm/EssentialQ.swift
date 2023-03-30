@@ -18,9 +18,7 @@ struct EssentialQ: View {
             }
             .offset(x: 432, y: 317)
             .padding(.bottom, 15)
-        }.onAppear(perform: {
-            playSound(sound: "essential question", type:"m4a")
-        })
+        }
     }
 }
 

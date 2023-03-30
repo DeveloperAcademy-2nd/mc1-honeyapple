@@ -53,7 +53,9 @@ struct BrowserContainer: View {
                     offsetX: 410,
                     offsetY: -180) {
                     showEssentialQuestion = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "big idea", type:"m4a")
+                })
             }
             
             // Essential Question
@@ -63,7 +65,9 @@ struct BrowserContainer: View {
                     offsetX: 432,
                     offsetY: 317) {
                     showChallengeStatement = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "essential question", type:"m4a")
+                })
             }
             
             // Challenge Statement
@@ -73,7 +77,9 @@ struct BrowserContainer: View {
                     offsetX: -442,
                     offsetY: 236) {
                     showInvestigate1 = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "challenge statement", type:"m4a")
+                })
             }
             
             // Investigate 1
@@ -83,7 +89,9 @@ struct BrowserContainer: View {
                     offsetX: 430,
                     offsetY: 85) {
                     showInvestigate2 = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "investigation 1", type:"m4a")
+                })
             }
             
             // Investigate 2
@@ -93,7 +101,9 @@ struct BrowserContainer: View {
                     offsetX: 388,
                     offsetY: 208) {
                     showSolution1 = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "investigation 2", type:"m4a")
+                })
             }
             
             // Solution 1
@@ -103,7 +113,9 @@ struct BrowserContainer: View {
                     offsetX: 424,
                     offsetY: 318) {
                     showSolution2 = true
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "solution 1", type:"m4a")
+                })
             }
             
             // Solution 2
@@ -113,7 +125,9 @@ struct BrowserContainer: View {
                     offsetX: 430,
                     offsetY: -198) {
                     // TODO: Outro로 이동
-                }
+                }.onAppear(perform: {
+                    playSound(sound: "solution 2", type:"m4a")
+                })
             }
             
             // Outro 1
@@ -122,6 +136,7 @@ struct BrowserContainer: View {
             // Outro 2
         }.onAppear {
             showIntro2 = true
+            playSound(sound: "Intro", type:"m4a")
         }
         
         

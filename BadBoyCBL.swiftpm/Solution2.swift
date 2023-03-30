@@ -17,9 +17,7 @@ struct Solution2: View {
             }
             .frame(width: 178.01, height: 80.41)
             .offset(x: 430, y: -198)
-        }.onAppear(perform: {
-            playSound(sound: "solution 2", type:"m4a")
-        })
+        }
     }
 }
 

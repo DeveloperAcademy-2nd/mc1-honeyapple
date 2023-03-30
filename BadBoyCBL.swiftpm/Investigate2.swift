@@ -16,9 +16,7 @@ struct Investigate2: View {
                    .frame(width: 178.01, height: 80.41)
             }
             .offset(x: 388, y: 208)
-        }.onAppear(perform: {
-            playSound(sound: "investigation 2", type:"m4a")
-        })
+        }
     }
 }
 

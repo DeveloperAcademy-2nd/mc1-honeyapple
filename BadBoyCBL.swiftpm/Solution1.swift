@@ -17,9 +17,7 @@ struct Solution1: View {
             }
             .offset(x: 424, y: 318)
             .padding(.bottom, 15)
-        }.onAppear(perform: {
-            playSound(sound: "solution 1", type:"m4a")
-        })
+        }
     }
 }
 
