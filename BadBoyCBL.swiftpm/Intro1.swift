@@ -9,12 +9,18 @@ struct Intro1: View {
                 .resizable()
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
-            Button(action: {print("Button1")}){
+            Button {
+                showIntro2 = true
+            } label: {
                 Image("시ㅈrㄱ,,,,,,")
                    .resizable()
                    .frame(width: 264, height: 47)
-                   .offset(x: 500, y: 440)
-                   .padding(.bottom, 15)
+            }
+            .offset(x: 500, y: 440)
+            .padding(.bottom, 15)
+            
+            if showIntro2 {
+                Intro2()
             }
         }
     }
