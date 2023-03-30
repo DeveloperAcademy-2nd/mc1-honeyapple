@@ -1,15 +1,15 @@
 import SwiftUI
 
-struct Intro2: View {
+struct Solution2: View {
     var body: some View {
-        Image("Intro2")
+        Image("Solution2")
             .resizable()
             .scaledToFit()
     }
 }
 
-struct Intro2_Previews: PreviewProvider {
+struct Solution2_Previews: PreviewProvider {
     static var previews: some View {
-        Intro2()
+        Solution2()
     }
 }
