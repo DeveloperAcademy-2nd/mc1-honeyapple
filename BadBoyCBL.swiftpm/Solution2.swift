@@ -1,17 +1,22 @@
 import SwiftUI
 
 struct Solution2: View {
+    @State var buttonHandler: ButtonHandler?
+    
     var body: some View {
         ZStack{
             Image("Solution2")
                 .resizable()
                 .scaledToFill()
-            Button(action: {print("Button1")}){
+            Button {
+                buttonHandler?()
+            } label: {
                 Image("버튼")
-                    .resizable()
-                    .frame(width: 178.01, height: 80.41)
-                    .offset(x: 430, y: -198)
+                   .resizable()
+                   .frame(width: 178.01, height: 80.41)
             }
+            .frame(width: 178.01, height: 80.41)
+            .offset(x: 430, y: -198)
         }
     }
 }
