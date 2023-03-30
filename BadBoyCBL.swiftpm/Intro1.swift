@@ -4,6 +4,8 @@ struct Intro1: View {
     var body: some View {
         VStack {
             Image("Intro1")
+                .resizable()
+                .scaledToFit()
         }
     }
 }
