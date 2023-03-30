@@ -33,7 +33,9 @@ struct EndingCredit: View {
                             started = true
                         }
                     }
-            }
+            }.onAppear(perform:{
+                playSound(sound:"Outro", type:"m4a")
+            })
         }
     }
 }
