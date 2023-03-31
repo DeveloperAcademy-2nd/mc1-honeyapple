@@ -9,6 +9,7 @@ struct Intro1: View {
                 .resizable()
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             Button {
                 showIntro2 = true
             } label: {

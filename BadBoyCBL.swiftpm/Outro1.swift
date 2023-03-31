@@ -6,6 +6,7 @@ struct Outro1: View {
             Image("Outro1")
                 .resizable()
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             Button(action: {print("Button1")}){
                 Image("버튼")
                     .resizable()

@@ -14,9 +14,11 @@ struct BrowserContainer: View {
     @State var showChallengeStatement = false
     @State var showInvestigate1 = false
     @State var showInvestigate2 = false
-    @State var showInvestigate3 = false
     @State var showSolution1 = false
     @State var showSolution2 = false
+    @State var showOutro1 = false
+    @State var showOutro2 = false
+    @State var showEnding = false
     
     @State private var titleAssetName = ""
     private let titleTimeInterval = 0.6
@@ -40,6 +42,7 @@ struct BrowserContainer: View {
              2) Button
              .animation
              */
+            
             if showIntro2 {
                 BrowserWithNextButton(
                     slideName: "in_intro1",
@@ -128,43 +131,83 @@ struct BrowserContainer: View {
                 })
             }
             
-            // Solution 1
-            if showSolution1 {
-                BrowserWithNextButton(
-                    slideName: "in_solution1",
-                    offsetX: 424,
-                    offsetY: 318) {
-                    showSolution2 = true
-                }.onAppear(perform: {
-                    playSound(sound: "solution 1", type:"m4a")
-                    
-                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+            ZStack {
+                // Solution 1
+                if showSolution1 {
+                    BrowserWithNextButton(
+                        slideName: "in_solution1",
+                        offsetX: 424,
+                        offsetY: 318) {
+                        showSolution2 = true
+                    }.onAppear(perform: {
+                        playSound(sound: "solution 1", type:"m4a")
+                        
+                        Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                            titleAssetName = "title_solution"
+                        }
+                    })
+                }
+                
+                // Solution 2
+                if showSolution2 {
+                    BrowserWithNextButton(
+                        slideName: "in_solution2",
+                        offsetX: 430,
+                        offsetY: -198) {
+                        // TODO: Outro로 이동
+                            showOutro1 = true
+                    }.onAppear(perform: {
+                        playSound(sound: "solution 2", type:"m4a")
                         titleAssetName = "title_solution"
-                    }
-                })
+                    })
+                }
+                
+                
+                // Outro 1
+                if showOutro1 {
+                    BrowserWithNextButton(
+                        slideName: "in_outro1",
+                        offsetX: 432,
+                        offsetY: 316) {
+                            showOutro2 = true
+                    }.onAppear(perform: {
+                        playSound(sound: "outro 1", type:"m4a")
+
+                        Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                            titleAssetName = "title_Outro"
+                        }
+                    })
+                }
+                
+                // Outro 2
+                if showOutro2 {
+                    BrowserWithNextButton(
+                        slideName: "in_outro2",
+                        offsetX: 282,
+                        offsetY: 192) {
+                            showEnding = true
+                    }.onAppear(perform: {
+                        titleAssetName = "title_Outro"
+                    })
+                }
+                
+                // Outro 2
+                // EndingCredit
+                
+            }.fullScreenCover(isPresented: $showEnding) {
+                
+                    EndingCredit()
+                
+
             }
             
-            // Solution 2
-            if showSolution2 {
-                BrowserWithNextButton(
-                    slideName: "in_solution2",
-                    offsetX: 430,
-                    offsetY: -198) {
-                    // TODO: Outro로 이동
-                }.onAppear(perform: {
-                    playSound(sound: "solution 2", type:"m4a")
-                    titleAssetName = "title_solution"
-                })
-            }
-            
-            // Outro 1
             
             
-            // Outro 2
         }.onAppear {
             showIntro2 = true
             playSound(sound: "Intro", type:"m4a")
         }
+        
     }
 }
 

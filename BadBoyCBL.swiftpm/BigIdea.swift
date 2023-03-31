@@ -9,6 +9,7 @@ struct BigIdea: View {
                 .resizable()
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             Button {
                 buttonHandler?()
             } label: {

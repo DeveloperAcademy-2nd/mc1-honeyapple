@@ -16,6 +16,7 @@ struct Intro2: View {
                 .resizable()
                 .frame(maxWidth:.infinity, maxHeight: .infinity)
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             // Button(action: {print("Button1")}) {
             //     Image("BlueNextButton")
             //         .resizable()

@@ -17,6 +17,7 @@ struct BrowserSeperationExample: View {
             Image("XP")
                 .resizable()
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             Button("eek") {
                 show = true
             }

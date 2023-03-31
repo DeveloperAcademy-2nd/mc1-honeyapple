@@ -28,7 +28,7 @@ struct EndingCredit: View {
                     .offset(x: 330, y: started ? -600 : (UIScreen.main.bounds.height / 2) + 200)
                     .onTapGesture {
                         withAnimation(
-                            .linear(duration: 20)
+                            .linear(duration: 30)
                         ) {
                             started = true
                         }

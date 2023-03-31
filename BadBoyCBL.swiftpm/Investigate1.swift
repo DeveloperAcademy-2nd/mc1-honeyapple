@@ -8,6 +8,7 @@ struct Investigate1: View {
             Image("Investigate1")
                 .resizable()
                 .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             Button {
                 buttonHandler?()
             } label: {
