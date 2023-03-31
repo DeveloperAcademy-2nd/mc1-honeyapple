@@ -18,13 +18,16 @@ struct BrowserContainer: View {
     @State var showSolution1 = false
     @State var showSolution2 = false
     
+    @State private var titleAssetName = ""
+    private let titleTimeInterval = 0.6
+    
     var body: some View {
         ZStack {
             Image("XP")
                 .resizable()
                 .scaledToFill()
             VStack {
-                Image("Test_HeaderTitle")
+                Image(titleAssetName)
                     .offset(CGSize(width: 0, height: 28))
                 Spacer()
                 Image("Footer")
@@ -43,6 +46,8 @@ struct BrowserContainer: View {
                     offsetX: 360,
                     offsetY: 310) {
                     showBigIdea = true
+                }.onAppear {
+                    // titleAssetName = "title_intro"
                 }
             }
             
@@ -55,6 +60,10 @@ struct BrowserContainer: View {
                     showEssentialQuestion = true
                 }.onAppear(perform: {
                     playSound(sound: "big idea", type:"m4a")
+                    
+                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                        titleAssetName = "title_bigIdea"
+                    }
                 })
             }
             
@@ -67,6 +76,10 @@ struct BrowserContainer: View {
                     showChallengeStatement = true
                 }.onAppear(perform: {
                     playSound(sound: "essential question", type:"m4a")
+                    
+                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                        titleAssetName = "title_essentialQ"
+                    }
                 })
             }
             
@@ -79,6 +92,10 @@ struct BrowserContainer: View {
                     showInvestigate1 = true
                 }.onAppear(perform: {
                     playSound(sound: "challenge statement", type:"m4a")
+                    
+                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                        titleAssetName = "title_challengeStatement"
+                    }
                 })
             }
             
@@ -91,6 +108,10 @@ struct BrowserContainer: View {
                     showInvestigate2 = true
                 }.onAppear(perform: {
                     playSound(sound: "investigation 1", type:"m4a")
+                    
+                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                        titleAssetName = "title_investigation"
+                    }
                 })
             }
             
@@ -103,6 +124,7 @@ struct BrowserContainer: View {
                     showSolution1 = true
                 }.onAppear(perform: {
                     playSound(sound: "investigation 2", type:"m4a")
+                    titleAssetName = "title_investigation"
                 })
             }
             
@@ -115,6 +137,10 @@ struct BrowserContainer: View {
                     showSolution2 = true
                 }.onAppear(perform: {
                     playSound(sound: "solution 1", type:"m4a")
+                    
+                    Timer.scheduledTimer(withTimeInterval: titleTimeInterval, repeats: false) { _ in
+                        titleAssetName = "title_solution"
+                    }
                 })
             }
             
@@ -127,6 +153,7 @@ struct BrowserContainer: View {
                     // TODO: Outro로 이동
                 }.onAppear(perform: {
                     playSound(sound: "solution 2", type:"m4a")
+                    titleAssetName = "title_solution"
                 })
             }
             
@@ -138,8 +165,6 @@ struct BrowserContainer: View {
             showIntro2 = true
             playSound(sound: "Intro", type:"m4a")
         }
-        
-        
     }
 }
 
